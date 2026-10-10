@@ -29,9 +29,9 @@ const PROFILE = {
   name: "Tejas Gadge",
   role: "Computer Engineer",
   location: "Maharashtra, India",
-  email: "you@example.com",
+  email: "tejasgadgeinternships@gmail.com",
   resume: "/resume.pdf",
-  photo: "/profile.jpg", // put your photo in /public, falls back to initials
+  photo: "/PassportPIC.jpg", // put your photo in /public, falls back to initials
   bio: "I build practical, real-world tools with clear user workflows, from admin dashboards to browser extensions and exam platforms.",
 };
 
@@ -56,8 +56,8 @@ const BUILDS = [
   { label: "APIs", icon: Server, color: "#06b6d4" },
 ];
 
-const SERVICES = [
-  { icon: Globe, title: "Full-stack web apps", desc: "React, Express and MongoDB, designed and built end to end." },
+const TESTIMONIALS = [
+  { icon: Globe, title: "Ayush Suri", subtitle:"Assistant Vice President at Citi",desc: "Tejas is highly skilled in AI/ML, particularly in building innovative and effective AI agents using n8n. His technical expertise, creativity, and problem-solving mindset make him a valuable asset to any team." },
   { icon: LayoutDashboard, title: "Admin dashboards", desc: "Clean internal tools that make daily workflows faster." },
   { icon: Puzzle, title: "Extensions & PWAs", desc: "Chrome extensions and installable apps that feel native." },
 ];
@@ -239,14 +239,14 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap items-center gap-3 pt-1">
-              <Button asChild size="lg" className="hm-hire rounded-full px-6">
+              <Button asChild size="lg" className="hm-hire p-6">
                 <a href={`mailto:${PROFILE.email}`}>
-                  <Mail /> Hire me
+                   Hire me
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full">
+              <Button asChild variant="outline" size="lg" className="hm-hire p-6">
                 <a href={PROFILE.resume} download>
-                  <Download /> Résumé
+                   Resume
                 </a>
               </Button>
               <Button asChild variant="link">
@@ -280,6 +280,7 @@ export default function Home() {
             <Badge className="hm-chip hm-chip-a">
               <Zap className="text-amber-500" /> Full-stack
             </Badge>
+          
             <Badge className="hm-chip hm-chip-b">
               <Rocket className="text-primary" /> 10+ shipped
             </Badge>
@@ -318,31 +319,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ---------- What I do ---------- */}
-        <section className="space-y-4">
-          <div className="space-y-1">
-            <h2 className="text-2xl font-bold tracking-tight">What do I help with</h2>
-            <p className="text-sm text-muted-foreground">
-              From the first idea to something real people use every day.
-            </p>
-          </div>
-          <div className="grid gap-3 lg:grid-cols-3">
-            {SERVICES.map(({ icon: Icon, title, desc }) => (
-              <Card key={title} className="hm-row flex-row items-center gap-4 rounded-2xl p-4 md:p-5">
-                <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
-                  <Icon />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <p className="font-semibold">{title}</p>
-                  <p className="text-sm text-muted-foreground">{desc}</p>
-                </div>
-                <div className="hm-arrow grid size-9 shrink-0 place-items-center rounded-full border">
-                  <ArrowUpRight className="size-4" />
-                </div>
-              </Card>
-            ))}
-          </div>
-        </section>
+        
 
         {/* ---------- Recent projects ---------- */}
         <section className="space-y-5">
@@ -389,16 +366,42 @@ export default function Home() {
             ))}
           </div>
         </section>
-
+{/* ---------- Testimonials ---------- */}
+        <section className="space-y-4">
+          <div className="space-y-1">
+            <h2 className="text-2xl font-bold tracking-tight">Testimonials</h2>
+            <p className="text-sm text-muted-foreground">
+              Hear about me from my clinets and mates.
+            </p>
+          </div>
+          <div className="grid gap-3 lg:grid-cols-3">
+            {TESTIMONIALS.map(({ icon: Icon, title,subtitle, desc }) => (
+              <Card key={title} className="hm-row flex-row items-center gap-4 rounded-2xl p-4 md:p-5">
+                <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
+                  <Icon />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="font-extrabold">{title}</p>
+                  <p className="font-light ">{subtitle}</p>
+                  <br/>
+                  <p className="text-sm text-muted-foreground">"{desc}"</p>
+                </div>
+                <div className="hm-arrow grid size-9 shrink-0 place-items-center rounded-full border">
+                  <ArrowUpRight className="size-4" />
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
         {/* ---------- CTA ---------- */}
         <Card className="hm-cta items-center gap-4 rounded-3xl p-8 text-center md:p-10">
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Have a project in mind?</h2>
           <p className="max-w-md text-sm opacity-85">
             I'm open to freelance work and full-time roles. Tell me what you're building.
           </p>
-          <Button asChild size="lg" variant="secondary" className="rounded-full px-6">
+          <Button asChild size="lg" variant="secondary" className="p-6 w-auto">
             <a href={`mailto:${PROFILE.email}`}>
-              <Mail /> Let's talk
+               Let's talk
             </a>
           </Button>
         </Card>
