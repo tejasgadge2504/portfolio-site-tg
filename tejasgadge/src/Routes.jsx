@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { House, FolderKanban, UserRound } from "lucide-react";
+import { House, FolderKanban, UserRound, Pen, Captions, GraduationCap } from "lucide-react";
 
 const load = (importer) => async () => ({
   Component: (await importer()).default,
@@ -16,17 +16,17 @@ export const routes = [
         handle: { nav: { label: "Home", to: "/", icon: House } },
       },
       {
-        path: "page-2",
-        lazy: load(() => import("./pages/Page2.jsx")),
+        path: "aimers-academy",
+        lazy: load(() => import("./pages/AimersAcademy.jsx")),
         handle: {
-          nav: { label: "Page 2", to: "/page-2", icon: FolderKanban },
+          nav: { label: "Aimers Academy", to: "/aimers-academy", icon: GraduationCap},
         },
       },
       {
-        path: "page-3",
-        lazy: load(() => import("./pages/Page3.jsx")),
+        path: "blogs",
+        lazy: load(() => import("./pages/Blogs.jsx")),
         handle: {
-          nav: { label: "Page 3", to: "/page-3", icon: UserRound },
+          nav: { label: "Blogs", to: "/blogs", icon: UserRound },
         },
       },
     ],

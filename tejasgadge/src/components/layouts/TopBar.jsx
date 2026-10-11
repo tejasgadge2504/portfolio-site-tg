@@ -7,6 +7,8 @@ import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import { navItems } from "../../Routes";
 
+const EMAIL = "tejasgadgeinternships@gmail.com";
+
 function useTheme() {
   const [dark, setDark] = useState(() => {
     try {
@@ -31,10 +33,13 @@ export default function TopBar() {
 
   return (
     <header
-    className="sticky top-0 z-30 flex items-center gap-3 border-b bg-background/80 px-4 pb-3 backdrop-blur md:px-6"
-    //   className="sticky top-0 z-30 flex items-center gap-3 border-b bg-card/80 px-4 pb-3 backdrop-blur md:px-8"
+      className="sticky top-0 z-30 flex items-center gap-3 border-b bg-background/80 px-4 pb-3 backdrop-blur md:px-6"
       style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 0.75rem)" }}
     >
+      <style>{`
+        .tb-row { display: inline-flex; align-items: center; gap: .5rem; }
+      `}</style>
+
       <SidebarTrigger className="hidden md:inline-flex" />
       <Separator orientation="vertical" className="hidden h-5 md:block" />
 
@@ -66,9 +71,12 @@ export default function TopBar() {
           {dark ? <Sun /> : <Moon />}
         </Button>
         <Button asChild className="rounded-full">
-          <a href="mailto:you@example.com">
-            <Send /> <span className="hidden sm:inline">Let's talk</span>
-            <span className="sm:hidden">Hire</span>
+          <a href={`mailto:${EMAIL}`}>
+            <span className="tb-row">
+              <Send className="size-4" />
+              <span className="hidden sm:inline">Let's talk</span>
+              <span className="sm:hidden">Hire</span>
+            </span>
           </a>
         </Button>
       </div>

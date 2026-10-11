@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import { SidebarProvider, SidebarInset } from "../ui/sidebar";
+import { SidebarProvider, SidebarInset } from "../ui/sidebar"; // from shadcn, NOT AppSidebar
 import AppSidebar from "../layouts/AppSidebar";
-import TopBar from "../layouts/ToolBar";
+import TopBar from "../layouts/TopBar";
 import BottomNav from "../layouts/BottomNav";
 
 export default function AppLayout() {
@@ -11,10 +11,6 @@ export default function AppLayout() {
         /* Safety net against leftover Vite template CSS. Safe to delete once App.css / #root rules are gone. */
         html, body, #root { max-width: none !important; margin: 0 !important; padding: 0 !important; text-align: left !important; }
         body { display: block !important; min-height: 100svh; }
-
-        /* Anchors rendered via <Button asChild> / <SidebarMenuButton asChild> must stay flex rows */
-        .app-shell a[class~="inline-flex"] { display: inline-flex; }
-        .app-shell a[class~="flex"] { display: flex; }
       `}</style>
 
       <AppSidebar />

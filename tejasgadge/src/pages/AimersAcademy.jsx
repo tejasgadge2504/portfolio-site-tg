@@ -1,10 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-export default function Page3() {
+export default function Page2() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Page 3</CardTitle>
+        <CardTitle>Aimers Academy</CardTitle>
         <CardDescription>Placeholder, content coming soon.</CardDescription>
       </CardHeader>
       <CardContent />

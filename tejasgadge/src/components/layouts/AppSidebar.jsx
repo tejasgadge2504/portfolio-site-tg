@@ -15,10 +15,12 @@ import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import { navItems } from "../../Routes";
 
+const EMAIL = "tejasgadgeinternships@gmail.com";
+
 const SOCIALS = [
   { icon: FaGithub, href: "https://github.com/", label: "GitHub" },
   { icon: FaLinkedin, href: "https://linkedin.com/", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:you@example.com", label: "Email" },
+  { icon: Mail, href: `mailto:${EMAIL}`, label: "Email" },
 ];
 
 export default function AppSidebar() {
@@ -27,6 +29,12 @@ export default function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
       <style>{`
+        .sb-brand { display: flex; align-items: center; gap: .75rem; min-width: 0; }
+        .sb-row { display: flex; align-items: center; gap: .75rem; width: 100%; min-width: 0; }
+        .sb-row > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .sb-row-center { justify-content: center; gap: .5rem; }
+
+        .sb-mark { background: linear-gradient(135deg, var(--primary), oklch(0.68 0.2 330)); }
         .sb-cta {
           border: 1.5px solid transparent;
           background:
@@ -34,48 +42,51 @@ export default function AppSidebar() {
             linear-gradient(120deg, var(--primary), oklch(0.7 0.2 330)) border-box;
           box-shadow: 0 8px 20px -10px color-mix(in oklab, var(--primary) 60%, transparent);
         }
-        .sb-mark { background: linear-gradient(135deg, var(--primary), oklch(0.68 0.2 330)); }
       `}</style>
 
       <SidebarHeader className="gap-4 p-4 group-data-[collapsible=icon]:p-2">
-        <div className="flex items-center gap-3">
+        <div className="sb-brand">
           <div className="sb-mark grid size-10 shrink-0 place-items-center rounded-xl text-sm font-bold text-white group-data-[collapsible=icon]:size-8 group-data-[collapsible=icon]:text-xs">
             TG
           </div>
-          <div className="leading-tight group-data-[collapsible=icon]:hidden">
-            <p className="text-base font-bold">Tejas Gadge</p>
-            <p className="text-xs text-muted-foreground">Computer Engineer</p>
+          <div className="min-w-0 leading-tight group-data-[collapsible=icon]:hidden">
+            <p className="truncate text-base font-bold">Tejas Gadge</p>
+            <p className="truncate text-xs text-muted-foreground">Computer Engineer</p>
           </div>
         </div>
 
-        <Button
-          asChild
-          variant="outline"
-          className="sb-cta h-11 rounded-full font-semibold group-data-[collapsible=icon]:hidden"
-        >
-          <a href="mailto:you@example.com">
-            <Send /> Hire me
-          </a>
-        </Button>
+        <div className="group-data-[collapsible=icon]:hidden">
+          <Button asChild variant="outline" className="sb-cta h-11 w-full rounded-full font-semibold">
+            <a href={`mailto:${EMAIL}`}>
+              <span className="sb-row sb-row-center">
+                <Send className="size-4 shrink-0" />
+                <span>Hire me</span>
+              </span>
+            </a>
+          </Button>
+        </div>
       </SidebarHeader>
 
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu className="gap-1">
             {navItems.map(({ label, to, icon: Icon }) => (
-              <SidebarMenuButton
-                key={to}
-                asChild
-                size="lg"
-                tooltip={label}
-                isActive={pathname === to}
-                className="rounded-xl text-[0.95rem] data-[active=true]:bg-primary/10 data-[active=true]:font-semibold data-[active=true]:text-primary"
-              >
-                <NavLink to={to} end>
-                  <Icon />
-                  <span className="group-data-[collapsible=icon]:hidden">{label}</span>
-                </NavLink>
-              </SidebarMenuButton>
+              <SidebarMenuItem key={to}>
+                <SidebarMenuButton
+                  asChild
+                  size="lg"
+                  tooltip={label}
+                  isActive={pathname === to}
+                  className="rounded-xl text-[0.95rem] data-[active=true]:bg-primary/10 data-[active=true]:font-semibold data-[active=true]:text-primary"
+                >
+                  <NavLink to={to} end>
+                    <span className="sb-row">
+                      <Icon className="size-4 shrink-0" />
+                      <span className="group-data-[collapsible=icon]:hidden">{label}</span>
+                    </span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             ))}
           </SidebarMenu>
         </SidebarGroup>
