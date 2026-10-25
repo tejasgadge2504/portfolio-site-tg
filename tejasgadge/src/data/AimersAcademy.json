@@ -1,0 +1,112 @@
+
+{
+  "academyName": "Aimers Academy",
+  "description": "Your learning hub for video lectures and study notes.",
+  "sections": [
+    {
+      "id": "videos",
+      "title": "Videos",
+      "description": "Watch topic-wise lectures and learn at your own pace.",
+      "topics": [
+        {
+          "id": "Logarithms-Tricks",
+          "title": "Logarithms Tricks",
+          "description": "Tricks for quick logarithms for Entrance.",
+          "videos": [
+            {
+              "id": "video-1",
+              "title": "LOGARITHM  BASIC TRICKS S-1 | BAAP TRICK  | JEE / NEET / CET",
+              "url": "https://youtu.be/iQDDCLbrBYg?si=eYUt_0BCE5ZEFyiT"
+            },
+            {
+              "id": "video-2",
+              "title": "LOGARITHM BASIC TRICKS S-2 | BAAP TRICK | JEE / NEET / CET",
+              "url": "https://youtu.be/nEux7_3AMJ4?si=KfhF_DG5_Tbmt-4T"
+            },
+            {
+              "id": "video-3",
+              "title": "LOGARITHM BASIC TRICKS S-3 | BAAP TRICK | JEE / NEET / CET",
+              "url": "https://youtu.be/A3CuOoNG76k?si=lXsazSUIbSes3p6D"
+            }
+          ]
+        },
+        {
+          "id": "Computer-Science-2",
+          "title": "Computer Science II",
+          "description": "Tricks to remember diagrams of MicroProcessors",
+          "videos": [
+            {
+              "id": "video-1",
+              "title": "40 Pin Diagram 8085",
+              "url": "https://youtu.be/Q9VJdn2oCes?si=o7Z-JKWs34_gmpGw"
+            },{
+              "id": "video-2",
+              "title": "Internal Block Diagram 8085",
+              "url": "https://youtu.be/RjOsd2CPJhM?si=KiemwyDicrtQNoBO"
+            }
+          ]
+        }, {
+          "id": "maths-tricks",
+          "title": "Maths Tricks",
+          "description": "Tricks for Quick Calculations",
+          "videos": [
+            {
+              "id": "video-1",
+              "title": "TRICK TO FIND THE SQUARES OF NUMBERS ENDING WITH 5",
+              "url": "https://youtu.be/KZoX6BQ2o5M?si=aS8hlI1CSjRsrK9l"
+            },{
+              "id": "video-2",
+              "title": "FINDING THE SQUARES OF RANDOM NUMBERS",
+              "url": "https://youtu.be/a-LR5XeV-DY?si=8P8UgmnvXShxuhZR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "notes",
+      "title": "CS Notes",
+      "description": "Access chapter-wise notes and study materials of CS.",
+      "folders": [
+        {
+          "id": "tps-cs-1-hsc",
+          "title": "TPS-CS-I (HSC)",
+          "description": "All chapters TPS of CS-I",
+          "folderId": "1NI9PuRUCDnbbBPD8OLUc8lpxuxoolWsi",
+          "url": "https://drive.google.com/drive/folders/1NI9PuRUCDnbbBPD8OLUc8lpxuxoolWsi"
+        },{
+          "id": "tps-cs-2-hsc",
+          "title": "TPS-CS-II (HSC)",
+          "description": "All chapters TPS of CS-II",
+          "folderId": "15LI4FPX5c6QbuWbJOfa03OFqtaLoTB7I",
+          "url": "https://drive.google.com/drive/folders/15LI4FPX5c6QbuWbJOfa03OFqtaLoTB7I"
+        },{
+          "id": "question-bank-cs-hsc",
+          "title": "QuestionBank (HSC)",
+          "description": "Question Bank for HSC CS I & II",
+          "folderId": "JzvK35ixPsdkQMCF3I7cOCC729dWk",
+          "url": "https://drive.google.com/drive/folders/1bk-JzvK35ixPsdkQMCF3I7cOCC729dWk"
+        },{
+          "id": "top-30-codes-cpp",
+          "title": "C++ Top 30 Codes",
+          "description": "Top 30 codes of c++ for HSC",
+          "folderId": "",
+          "url": "https://docs.google.com/document/d/12p-nU_F9U5J0Dy8ejTLr2VXQSpscthfAPY-uJrG1tD0"
+        }
+      ]
+    },{
+      "id": "notes",
+      "title": "IT Notes",
+      "description": "Access chapter-wise notes and study materials of HSC IT.",
+      "folders": [
+        {
+          "id": "it-notes",
+          "title": "IT IMP's",
+          "description": "IMPs and LMRs for HSC IT",
+          "folderId": "",
+          "url": "https://drive.google.com/drive/folders/11Sl6ZRcBGqY55W9Iyb3uSpn5r4UYgQG9"
+        }
+      ]
+    }
+  ]
+}
