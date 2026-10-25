@@ -499,9 +499,8 @@ export const PAGE_SECTIONS = {
 
   "/aimers-academy": [
     // Replace these examples with Page 2's actual sections and IDs.
-    { label: "Overview", id: "overview" },
-    { label: "Details", id: "details" },
-    { label: "Contact", id: "contact" },
+    { label: "Videos", id: "videos" },
+    { label: "Notes", id: "notes" }
   ],
 
   "/blogs": [
