@@ -14,14 +14,18 @@ import {
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import { navItems } from "../../Routes";
+import {
+  PROFILE,
+  SOCIALS,
+  STATS,
+  BUILDS,
+  TESTIMONIALS,
+  PROJECTS,
+  FILTERS,
+  EMAIL
+} from "../../data/Portfolio";
 
-const EMAIL = "tejasgadgeinternships@gmail.com";
 
-const SOCIALS = [
-  { icon: FaGithub, href: "https://github.com/", label: "GitHub" },
-  { icon: FaLinkedin, href: "https://linkedin.com/", label: "LinkedIn" },
-  { icon: Mail, href: `mailto:${EMAIL}`, label: "Email" },
-];
 
 export default function AppSidebar() {
   const { pathname } = useLocation();

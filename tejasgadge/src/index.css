@@ -121,7 +121,7 @@
 } */
 
 
-:root {
+#root {
   --radius: 1rem;
   --background: oklch(0.985 0.006 285);
   --foreground: oklch(0.21 0.04 285);
@@ -156,8 +156,8 @@
   --sidebar-ring: oklch(0.58 0.2 285);
 }
 
-:root.dark,
-.dark {
+
+html.dark #root{
   --background: oklch(0.16 0.025 285);
   --foreground: oklch(0.96 0.01 285);
   --card: oklch(0.2 0.03 285);
@@ -192,11 +192,47 @@
 }
 
 /* Page canvas follows the theme, and the browser's own UI (scrollbars) follows too */
-html:root {
+html {
+  min-height: 100%;
   background-color: var(--background);
   color: var(--foreground);
   color-scheme: light;
+  transition: background-color 0.25s ease;
 }
-html:root.dark {
+
+html.dark {
   color-scheme: dark;
 }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* React root should fill the viewport */
+#root {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+
+.blinking-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.3;
+  }
+}
+
